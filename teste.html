@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CosmicTasks</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #1c0f2a;
+      }
+      .primary-header,
+      .hero {
+        --parallax-speed: -5;
+        z-index: 10;
+      }
+
+      .hero {
+        height: fit-content;
+      }
+
+      .parallax_bg {
+        --parallax-speed: 5;
+        min-height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .parallax_mulher {
+        --parallax-speed: -15;
+      }
+
+      .parallax_estrelas,
+      .parallax_planeta1 {
+        --parallax-speed: 10;
+      }
+
+      .parallax_homem {
+        --parallax-speed: -5;
+      }
+
+      .parallax_planeta2 {
+        --parallax-speed: 25;
+      }
+
+      .parallax {
+        height: fit-content;
+        display: grid;
+        grid-template-areas: "stack";
+        position: relative;
+        z-index: 0;
+      }
+
+      .parallax > * {
+        grid-area: stack;
+        animation: parallax linear;
+        animation-timeline: scroll();
+      }
+
+      .parallax > img {
+        width: 100%;
+      }
+
+      @keyframes parallax {
+        to {
+          transform: translateY(calc(var(--parallax-speed) * 200px));
+        }
+      }
+
+      .main-content {
+        position: relative;
+        z-index: 1;
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parallax">
+      <header class="primary-header"></header>
+
+      <div class="hero">
+        <div class="wrapper">
+          <h1 class="hero__title">CosmicTasks</h1>
+          <p class="hero__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+            voluptatum.
+          </p>
+          <button class="button">Começar</button>
+        </div>
+      </div>
+
+      <img src="images/background.jpg" alt="" class="parallax_bg" />
+      <img src="images/estrelas.png" alt="" class="parallax_estrelas" />
+      <img src="images/planeta-2.png" alt="" class="parallax_planeta2" />
+      <img src="images/planeta-1.png" alt="" class="parallax_planeta1" />
+      <img src="images/mulher.png" alt="" class="parallax_mulher" />
+      <img src="images/homem.png" alt="" class="parallax_homem" />
+      <img
+        src="images/foreground-back.png"
+        alt=""
+        class="parallax_foreground_back"
+      />
+      <img
+        src="images/foreground-front.png"
+        alt=""
+        class="parallax_foreground_front"
+      />
+    </div>
+
+    <main class="main-content">
+      <div class="wrapper">
+        <h1>teste</h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id maiores
+          quam dolores aliquam accusantium modi quae explicabo vel rerum alias
+          doloribus quisquam magni soluta nihil facere voluptatem a, aliquid
+          culpa.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+          quam doloremque neque error amet sint saepe voluptates. Fuga eaque,
+          tempora at odit reiciendis labore voluptatibus iusto. Voluptatum ullam
+          ipsam ut.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          cupiditate voluptas possimus architecto corporis eos ad quam
+          repudiandae animi? Quos, officia itaque incidunt cum ad blanditiis
+          alias culpa vitae laudantium.
+        </p>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id maiores
+          quam dolores aliquam accusantium modi quae explicabo vel rerum alias
+          doloribus quisquam magni soluta nihil facere voluptatem a, aliquid
+          culpa.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+          quam doloremque neque error amet sint saepe voluptates. Fuga eaque,
+          tempora at odit reiciendis labore voluptatibus iusto. Voluptatum ullam
+          ipsam ut.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          cupiditate voluptas possimus architecto corporis eos ad quam
+          repudiandae animi? Quos, officia itaque incidunt cum ad blanditiis
+          alias culpa vitae laudantium.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
+```
