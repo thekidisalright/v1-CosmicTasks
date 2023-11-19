@@ -30,16 +30,27 @@ function parallax() {
   homem.style.right = valor * -0.5 + "px";
 }
 
-window.addEventListener("scroll", function () {
+function corHeader() {
   const header = document.getElementById("header");
-  const comoFuncionaSection = document.getElementById("como-funciona");
-  const rect = comoFuncionaSection.getBoundingClientRect();
+  const sections = [
+    { id: "como-funciona", color: "var(--darker-2)" },
+    { id: "planos", color: "var(--darker-3)" },
+    { id: "contato", color: "var(--darker-4)"},
+    { id: "sobre", color: "var(--darker-5)" }
+  ];
 
-  if (rect.top <= 0 && rect.bottom >= 0) {
-    header.style.backgroundColor = "var(--darker-2)"
-  } else {
-    header.style.backgroundColor = "transparent"
+  for (let section of sections) {
+    const element = document.getElementById(section.id);
+    const rect = element.getBoundingClientRect();
+
+    if (rect.top <= 0 && rect.bottom >= 0) {
+      header.style.backgroundColor = section.color;
+      return;
+    }
   }
-});
+
+  header.style.backgroundColor = "transparent";
+}
 
 window.addEventListener("scroll", parallax);
+window.addEventListener("scroll", corHeader);

@@ -48,17 +48,17 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" onclick="smoothScroll('#sobre')"
-                >Sobre</a
-              >
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="#" onclick="smoothScroll('#contato')"
                 >Contato</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link btn-login" href="#">Login</a>
+              <a class="nav-link" href="#" onclick="smoothScroll('#sobre')"
+                >Sobre</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn-login" href="login.html">Login</a>
             </li>
           </ul>
         </div>
@@ -141,8 +141,69 @@
 
       <section class="sections" id="planos">
         <div class="wrapper">
-          <h2 class="main-title">Preços</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem consequatur hic accusantium tempora iste? Rerum dolorum, odio sit aliquid optio officiis soluta, at voluptates sint id nam tenetur doloribus? Odio! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia deserunt ullam doloribus aliquid explicabo natus delectus, veniam ipsum earum culpa! Praesentium nisi dolor dolore consequuntur aliquid possimus est, enim quisquam?</p>
+          <h2 class="main-title">Planos</h2>
+          <div class="card-group mt-3">
+            <div class="card" id="basico">
+              <div class="card-body">
+                <h5 class="card-subtitle">Básico</h5>
+                <h6 class="card-title">Gratuito</h6>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                  voluptatum, quibusdam, voluptate, quia quod voluptas quos
+                  exercitationem quas voluptatibus quidem doloribus. Quisquam
+                  voluptatum, quibusdam, voluptate, quia quod voluptas quos
+                  exercitationem quas voluptatibus quidem doloribus.
+                </p>
+                <a href="#" class="card-link">Assinar</a>
+              </div>
+            </div>
+            <div class="card" id="premium">
+              <div class="card-body">
+                <h5 class="card-subtitle">Premium</h5>
+                <h6 class="card-title">R$ 14,99 <span>por mês</span></h6>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                  voluptatum, quibusdam, voluptate, quia quod voluptas quos
+                  exercitationem quas voluptatibus quidem doloribus. Quisquam
+                  voluptatum, quibusdam, voluptate, quia quod voluptas quos
+                  exercitationem quas voluptatibus quidem doloribus.
+                </p>
+                <a href="#" class="card-link">Assinar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sections" id="contato">
+        <div class="wrapper">
+          <h2 class="main-title mb-3">Contato</h2>
+          <div class="contact-container">
+            <form action="#" class="form">
+              <div class="form-group">
+                <label class="label" for="nome">Nome</label>
+                <input type="text" id="nome" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label class="label" for="email">E-mail</label>
+                <input type="email" id="email" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label class="label" for="mensagem">Mensagem</label>
+                <textarea id="mensagem" class="form-control"></textarea>
+              </div>
+              <button type="submit" class="btn btn-enviar">Enviar</button>
+            </form>
+            <img src="images/astronauta_mao_rosto.svg" class="contact-image img-fluid d-block" />
+          </div>
+        </div>
+      </section>
+
+      <section class="sections" id="sobre">
+        <div class="wrapper">
+          <h2 class="main-title">Sobre Nós</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo temporibus aspernatur laborum officiis eos, consequatur eius dolor praesentium a aperiam dicta deserunt distinctio nisi natus architecto quos vero nam iste. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate, dignissimos nisi accusantium hic minima minus sint sequi iste reprehenderit provident odit cum quis, voluptates earum asperiores aut omnis alias corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus unde aliquid soluta porro voluptas delectus explicabo suscipit nam expedita at nostrum molestias consectetur numquam natus laboriosam aut, quis illum ipsa.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore assumenda doloremque repellat sunt odio molestias, pariatur reiciendis ipsum voluptatibus neque dolorem, incidunt ullam rerum expedita accusantium facilis earum! Vero, odit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, ea laudantium! Neque ratione fugiat eos corporis exercitationem quo sequi, cupiditate maxime officiis deleniti temporibus ea, consequatur saepe illum, dolor earum?</p>
         </div>
       </section>
     </main>

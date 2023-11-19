@@ -23,6 +23,10 @@ html {
     box-sizing: border-box; /*tirando o espaçamento entre as divs*/
 
     font-family: "Montserrat", sans-serif;
+
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--preto) var(--cor-secundaria);
 }
 
 *::before,
@@ -55,6 +59,24 @@ body {
     background-color: var(--cor-principal);
 }
 
+::-webkit-scrollbar-track {
+    background: var(--cor-secundaria) !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--preto) !important;
+    border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--branco) !important;
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+    background: var(--cor-secundaria) !important;
+}
+
 button{
     background: none;
     color: inherit;
@@ -69,7 +91,7 @@ button{
     position: fixed;
     top: 0; /*distancia do topo*/
     left: 0; /*distancia da esquerda*/
-    z-index: 10000; /*para ficar na frente do resto*/
+    z-index: 10001; /*para ficar na frente do resto*/
 
     width: 100%;
     padding: 30px 100px;
@@ -212,13 +234,56 @@ button{
     background-color: var(--darker-2);
 }
 
+#como-funciona::after {
+    content: "";
+    display: block;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(
+        to bottom,
+        var(--darker-2),
+        var(--darker-3)
+    );
+}
+
 #planos {
     background-color: var(--darker-3);
 }
 
+#planos::after {
+    content: "";
+    display: block;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(
+        to bottom,
+        var(--darker-3),
+        var(--darker-4)
+    );
+}
+
+#contato {
+    background-color: var(--darker-4);
+}
+
+#contato::after {
+    content: "";
+    display: block;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(
+        to bottom,
+        var(--darker-4),
+        var(--darker-5)
+    );
+}
+
+#sobre {
+    background-color: var(--darker-5);
+}
+
 .sections {
     position: relative;
-    padding: 100px;
 }
 
 .sections .main-title {
@@ -256,6 +321,120 @@ button{
 .wrapper {
     max-width: 70rem;
     margin-inline: auto;
+    padding: 25px 100px;
+}
+
+#basico {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+#premium {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: var(--cor-secundaria);
+    transition: all 0.3s ease-in-out;
+}
+
+#basico,
+#premium {
+    transition: all 0.3s ease-in-out;
+    color: var(--preto);
+    padding: 2rem;
+}
+
+#basico:hover,
+#premium:hover {
+    box-shadow: 0 0 20px var(--branco);
+    color: var(--preto);
+    animation: float 3s ease-in-out infinite alternate;
+}
+
+.card-subtitle {
+    margin-bottom: 2rem !important;
+}
+
+.card-title {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 2rem !important;
+}
+
+.card-title span {
+    font-size: 14px;
+}
+
+.card-text {
+    color: var(--preto) !important;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 2rem !important;
+}
+
+.card-link{
+    background-color: var(--preto);
+    color: var(--cor-secundaria);
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 2rem;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+.contact-container {
+    display: flex;
+    align-items: stretch; /* Adicione esta linha */
+    justify-content: space-evenly;
+}
+  
+.form {
+    width: 50%;
+}
+  
+.contact-image {
+    max-width: 250px !important;
+}
+
+form .label {
+    color: var(--branco) !important;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#nome,
+#email,
+#mensagem {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+form .btn-enviar {
+    background-color: var(--cor-secundaria);
+    color: var(--preto);
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+form .btn-enviar:hover {
+    background-color: var(--preto);
+    color: var(--cor-secundaria);
+    cursor: pointer;
 }
 
 @media (max-width: 600px) {
