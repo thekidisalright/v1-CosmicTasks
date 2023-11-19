@@ -246,6 +246,13 @@ button{
     );
 }
 
+.logo-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 #planos {
     background-color: var(--darker-3);
 }
@@ -280,6 +287,18 @@ button{
 
 #sobre {
     background-color: var(--darker-5);
+}
+
+#sobre::after {
+    content: "";
+    display: block;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(
+        to bottom,
+        var(--darker-5),
+        var(--darker-6)
+    );
 }
 
 .sections {
@@ -436,6 +455,49 @@ form .btn-enviar:hover {
     color: var(--cor-secundaria);
     cursor: pointer;
 }
+
+footer {
+    background-color: var(--darker-6);
+    color: var(--branco);
+    padding: 20px 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .footer-item {
+    flex: 1;
+    margin: 0 15px;
+  }
+  
+  .footer-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--cor-secundaria);
+  }
+  
+  .footer-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-list-item {
+    margin-bottom: 10px;
+  }
+  
+  .footer-link {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-link:hover {
+    color: var(--cor-principal);
+  }
 
 @media (max-width: 600px) {
     header ul {
