@@ -508,3 +508,82 @@ footer {
       display: block;
     }
 }
+
+@media (max-width: 1200px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-item {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #header {
+        padding: 20px 50px;
+    }
+
+    .wrapper {
+        padding: 25px 50px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-container .contact-image {
+        align-self: center;
+        margin-top: 20px;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .card-group {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    #header {
+        padding: 15px 30px;
+    }
+
+    .wrapper {
+        padding: 25px 30px;
+    }
+
+    #parallax-text {
+        font-size: 5vw;
+    }
+
+    #btn {
+        font-size: 18px;
+        padding: 8px 20px;
+    }
+
+    .sections .main-title,
+    .sections .sec-title {
+        font-size: 24px;
+    }
+
+    .sections p {
+        font-size: 16px;
+    }
+
+    .card-title {
+        font-size: 24px;
+    }
+
+    .card-text,
+    form .label,
+    #nome,
+    #email,
+    #mensagem,
+    form .btn-enviar {
+        font-size: 16px;
+    }
+}
