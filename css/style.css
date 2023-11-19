@@ -13,12 +13,21 @@
     --preto: #1d1d1f;
 }
 
+html {
+    color-scheme: dark light;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box; /*tirando o espaçamento entre as divs*/
 
     font-family: "Montserrat", sans-serif;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 @keyframes slide {
@@ -200,41 +209,53 @@ button{
 }
 
 #como-funciona {
-    position: relative;
-    padding: 100px;
     background-color: var(--darker-2);
 }
 
-#como-funciona .main-title {
+#planos {
+    background-color: var(--darker-3);
+}
+
+.sections {
+    position: relative;
+    padding: 100px;
+}
+
+.sections .main-title {
     color: var(--branco);
     font-size: 32px;
     font-weight: 700;
-    text-align: justify;
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
-#como-funciona .main-title:hover {
+.sections .main-title:hover {
     color: var(--cor-secundaria);
 }
 
-#como-funciona .sec-title {
+.sections .sec-title {
     color: var(--branco);
     font-size: 24px;
     font-weight: 700;
-    text-align: justify;
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-top: 2rem;
 }
 
-#como-funciona p{
+.sections p{
     color: var(--branco);
     font-size: 18px;
     font-weight: 400;
     text-align: justify;
     margin-top: 20px;
 
+}
+
+.wrapper {
+    max-width: 70rem;
+    margin-inline: auto;
 }
 
 @media (max-width: 600px) {
