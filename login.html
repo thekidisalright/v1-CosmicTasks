@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/login.css">
 
@@ -24,17 +25,44 @@
             <div class="featured-image mb-3">
                 <img src="images/logo.png" class="img-fluid" style="width: 250px;" alt="">
             </div>
-            <p class="text-white fs-2">Be verified</p>
-            <small class="text-white text-wrap text-center">Join expericiend designers in this plataform</small>
+            <p class="text-white fs-2">CosmicTasks</p>
+            <small class="text-white text-wrap text-center">Organização e produtividade em uma aventura cósmica.</small>
 
         </div>
 
         <!-- Right box -->
 
         <div class="col-md-6 right-box">
-
-
-            
+            <div class="row align-items-center">
+                <div class="header-text mb-4">
+                    <h2>Olá, novamente</h2>
+                    <p>Estamos feliz que voltou.</p>
+                </div>
+                <div class="input-group mb-3">
+                    <input id="formEmail" type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Endereço de e-mail">
+                </div>
+                <div class="input-group mb-1">
+                    <input id="formSenha" type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Senha">
+                </div>
+                <div class="input-group mb-5 d-flex justify-content-between">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="formCheck">
+                        <label for="formCheck" class="form-check-label text-secondary"><small>Lembre-me</small></label>
+                    </div>
+                    <div class="forgot">
+                        <small><a href="#">Esqueceu a senha?</a></small>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <button class="btn btn-lg btn-primary w-100 fs-6">Login</button>
+            </div>
+            <div class="input-group mb-3">
+                <button class="btn btn-lg btn-light w-100 fs-6"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" style="width: 20px;" alt="Google" class="me-2"><small>Entrar com Google</small></button>
+            </div>
+            <div class="row">
+                <small>Não tem uma conta? <a href="">Cadastre-se</a></small>
+            </div>
         </div>
 
    </div>

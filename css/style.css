@@ -111,6 +111,23 @@ button{
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+}
+
+#header .logo-image {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+}
+
+#header .logo:hover .logo-image {
+    opacity: 1;
+    display: inline !important;
+    transform: translateX(10px);
 }
 
 #header ul {
@@ -130,17 +147,19 @@ button{
     list-style: none;
 }
 
-#header ul li a {
+#header ul li a, #header ul li button {
     text-decoration: none;
     color: var(--branco);
 
     padding: 6px 15px;
     border-radius: 20px;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 #header ul li a:hover,
-#header ul li a.active {
+#header ul li a.active,
+#header ul li button:hover,
+#header ul li button.active {
     background-color: var(--cor-secundaria);
     color: var(--preto);
 }
@@ -229,6 +248,7 @@ button{
     font-size: 24px;
     transform: translateY(14vw);
 }
+
 
 #como-funciona {
     background-color: var(--darker-2);

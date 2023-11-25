@@ -9,12 +9,26 @@ const foregroundFront = document.getElementById("foreground-front");
 const btn = document.getElementById("btn");
 const comoFunciona = document.getElementById("como-funciona");
 
-function smoothScroll($element) {
-  const $toElement = document.querySelector($element);
-  $toElement.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-    inline: "nearest",
+function smoothScroll(elementId) {
+  try {
+    const element = document.querySelector(elementId);
+    if (!element) {
+      console.error(`Element with ID ${elementId} not found.`);
+      return;
+    }
+    element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+    setTimeout(() => {
+      window.scrollBy(0, -99);
+    }, 500); // Adjust delay as needed
+  } catch (error) {
+    console.error(`Error in smoothScroll: ${error}`);
+  }
+}
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
   });
 }
 
@@ -32,24 +46,36 @@ function parallax() {
 
 function corHeader() {
   const header = document.getElementById("header");
+  const inicioNav = document.getElementById("nav-inicio");
+  header.style.backgroundColor = "transparent";
   const sections = [
-    { id: "como-funciona", color: "var(--darker-2)" },
-    { id: "planos", color: "var(--darker-3)" },
-    { id: "contato", color: "var(--darker-4)"},
-    { id: "sobre", color: "var(--darker-5)" }
+    { id: "como-funciona", color: "var(--darker-2)", nav: "nav-como-funciona" },
+    { id: "planos", color: "var(--darker-3)", nav: "nav-planos" },
+    { id: "contato", color: "var(--darker-4)", nav: "nav-contato" },
+    { id: "sobre", color: "var(--darker-5)", nav: "nav-sobre" }
   ];
+
+  let isAnySectionActive = false;
 
   for (let section of sections) {
     const element = document.getElementById(section.id);
+    const nav = document.getElementById(section.nav);
     const rect = element.getBoundingClientRect();
 
-    if (rect.top <= 0 && rect.bottom >= 0) {
+    if (rect.top <= 100 && rect.bottom >= 100) {
       header.style.backgroundColor = section.color;
-      return;
+      nav.classList.add("active");
+      isAnySectionActive = true;
+    } else {
+      nav.classList.remove("active");
     }
   }
 
-  header.style.backgroundColor = "transparent";
+  if (!isAnySectionActive) {
+    inicioNav.classList.add("active");
+  } else {
+    inicioNav.classList.remove("active");
+  }
 }
 
 window.addEventListener("scroll", parallax);

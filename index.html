@@ -11,7 +11,10 @@
   <body>
     <header class="navbar navbar-expand-lg" id="header">
       <div class="container-fluid">
-        <a class="logo" href="#">CosmicTasks</a>
+        <a class="logo" href="index.html">
+          CosmicTasks
+          <img class="logo-image" src="images/logo.png" alt="Logo">
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -26,35 +29,32 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a
+              <button
                 class="nav-link active"
-                aria-current="page"
-                href="#"
-                onclick="smoothScroll('#header')"
-                >Início</a
+                onclick="scrollToTop()" id="nav-inicio"
+                >Início</button
               >
             </li>
             <li class="nav-item">
-              <a
+              <button
                 class="nav-link"
-                href="#"
-                onclick="smoothScroll('#como-funciona')"
-                >Como funciona</a
+                onclick="smoothScroll('#como-funciona')" id="nav-como-funciona"
+                >Como funciona</button
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" onclick="smoothScroll('#planos')"
-                >Planos</a
+              <button class="nav-link" id="nav-planos" onclick="smoothScroll('#planos')"
+                >Planos</button
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" onclick="smoothScroll('#contato')"
-                >Contato</a
+              <button class="nav-link" id="nav-contato" onclick="smoothScroll('#contato')"
+                >Contato</button
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" onclick="smoothScroll('#sobre')"
-                >Sobre</a
+              <button class="nav-link" id="nav-sobre" onclick="smoothScroll('#sobre')"
+                >Sobre</button
               >
             </li>
             <li class="nav-item">
@@ -155,7 +155,7 @@
                   voluptatum, quibusdam, voluptate, quia quod voluptas quos
                   exercitationem quas voluptatibus quidem doloribus.
                 </p>
-                <a href="#" class="card-link">Assinar</a>
+                <a href="login.html" class="card-link">Começar</a>
               </div>
             </div>
             <div class="card" id="premium">
@@ -169,7 +169,7 @@
                   voluptatum, quibusdam, voluptate, quia quod voluptas quos
                   exercitationem quas voluptatibus quidem doloribus.
                 </p>
-                <a href="#" class="card-link">Assinar</a>
+                <a href="login.html" class="card-link">Assinar</a>
               </div>
             </div>
           </div>
