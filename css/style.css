@@ -1,18 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600;700;800;900&display=swap');
 
-:root{
-    --cor-principal: #7D12FF;
-    --cor-secundaria: #FFD700;
-    --darker-1: #6918D0;
-    --darker-2: #5519A2;
-    --darker-3: #421877;
-    --darker-4: #2F154F;
-    --darker-5: #221038;
-    --darker-6: #1C0F2A;
-    --branco: #f5f5f7;
-    --preto: #1d1d1f;
-}
-
 html {
     color-scheme: dark light;
 }
