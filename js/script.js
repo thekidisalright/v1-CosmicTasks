@@ -19,7 +19,7 @@ function smoothScroll(elementId) {
     element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
     setTimeout(() => {
       window.scrollBy(0, -99);
-    }, 500); // Adjust delay as needed
+    }, 1000); // Adjust delay as needed
   } catch (error) {
     console.error(`Error in smoothScroll: ${error}`);
   }
