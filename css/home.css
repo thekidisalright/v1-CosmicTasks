@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--branco);
+}
+
+body{
+    font-family: 'Lexend', sans-serif;
+    background-color: var(--darker-5) !important;
+}
+
+.hoje{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hoje{
+    font-size: 18pt;
+    font-weight: 700;
+    margin-top: auto;
+    margin-right: 1rem;
+}
+
+.icone-hoje{
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+}
+
+.circle {
+    display: block; /* Mostra o SVG normal */
+}
+
+.check {
+    display: none; /* Esconde o SVG de hover inicialmente */
+}
+
+.concluir:hover .circle {
+    display: none; /* Esconde o SVG normal quando o mouse está sobre o div */
+}
+
+.concluir:hover .check {
+    display: block; /* Mostra o SVG de hover quando o mouse está sobre o div */
+}
