@@ -60,11 +60,14 @@
 body{
     font-family: 'Lexend', sans-serif;
     background-color: var(--darker-5) !important;
+    color: var(--branco);
 }
 
 .layout {
-    width: 1366px;
-    height: 768px;
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    min-height: 100vh;
 
     display: grid;
     grid:
@@ -73,15 +76,92 @@ body{
         "sidebar tarefas" 1fr
         "sidebar tarefas" 1fr
         "sidebar tarefas" 1fr
-        / 250px auto;
+        / 300px auto;
     gap: 8px;
 }
 
 .sidebar {
     grid-area: sidebar;
+    background-color: var(--darker-6);
+    padding: 1rem;
 }
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.foto-usuario {
+    width: 30px;
+}
+
+.nome-usuario {
+    font-size: 14pt;
+    font-weight: 600;
+    color: var(--branco);
+}
+
+.configuracoes-svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--branco);
+}
+
+.configuracoes-svg:hover {
+    fill: var(--cor-secundaria);
+    cursor: pointer;
+}
+
+.sidebar-body {
+    margin-top: 2rem;
+}
+
+.add-tarefa {
+    color: var(--branco);
+    width: fit-content;
+}
+
+.add-tarefa:hover {
+    color: var(--cor-secundaria);
+    cursor: pointer;
+}
+
+.add-tarefa:hover .adicionar-svg {
+    fill: var(--cor-secundaria);
+}
+
+.adicionar-svg {
+    width: 1.5rem;
+    fill: var(--branco);
+    margin-right: 0.5rem;
+}
+
+.sidebar-lista {
+    list-style: none;
+    color: var(--branco);
+    font-size: 14pt;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.sidebar-lista .active{
+    font-weight: 500;
+}
+
 .hoje {
     grid-area: hoje;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    height: fit-content;
 }
 
 .tarefas {
@@ -94,23 +174,46 @@ body{
     justify-content: center;
     width: fit-content;
     color: var(--branco);
+    gap: 1rem;
 }
 
 #hoje{
-    font-size: 18pt;
+    font-size: 16pt;
     font-weight: 700;
     margin-top: auto;
     margin-bottom: auto;
-    margin-right: 1rem;
 }
 
 .today-svg {
-    width: 25px;
-    height: 25px;
-    margin-right: 1rem;
+    width: 24px;
+    height: 24px;
+    fill: var(--cor-secundaria);
+}
+
+.expand-more-svg {
+    width: 24px;
+    height: 24px;
     fill: var(--branco);
 }
 
-.today-svg:hover {
+.expand-more-svg:hover {
     fill: var(--cor-secundaria);
+    cursor: pointer;
+}
+
+.filtros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    gap: 1rem;
+}
+
+.filtros-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    gap: 0.5rem;
+    color: var(--branco);
 }
