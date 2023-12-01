@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;400;500;600;700;800;900&display=swap');
 
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: var(--branco);
 }
 
-body{
-    font-family: 'Lexend', sans-serif;
-    background-color: var(--darker-5) !important;
+.side-bar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
 }
 
 .hoje{
@@ -32,17 +34,83 @@ body{
 }
 
 .circle {
-    display: block; /* Mostra o SVG normal */
+    display: block;
 }
 
 .check {
-    display: none; /* Esconde o SVG de hover inicialmente */
+    display: none;
 }
 
 .concluir:hover .circle {
-    display: none; /* Esconde o SVG normal quando o mouse está sobre o div */
+    display: none;
 }
 
 .concluir:hover .check {
-    display: block; /* Mostra o SVG de hover quando o mouse está sobre o div */
+    display: block;
+
+.concluir{
+    margin-right: 1rem;
+}
+
+.titulo-tarefa{
+    font-size: 14pt;
+    font-weight: 700;
+} */
+
+body{
+    font-family: 'Lexend', sans-serif;
+    background-color: var(--darker-5) !important;
+}
+
+.layout {
+    width: 1366px;
+    height: 768px;
+
+    display: grid;
+    grid:
+        "sidebar hoje" 1fr
+        "sidebar tarefas" 1fr
+        "sidebar tarefas" 1fr
+        "sidebar tarefas" 1fr
+        "sidebar tarefas" 1fr
+        / 250px auto;
+    gap: 8px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+.hoje {
+    grid-area: hoje;
+}
+
+.tarefas {
+    grid-area: tarefas;
+}
+
+.text-hoje{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    color: var(--branco);
+}
+
+#hoje{
+    font-size: 18pt;
+    font-weight: 700;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 1rem;
+}
+
+.today-svg {
+    width: 25px;
+    height: 25px;
+    margin-right: 1rem;
+    fill: var(--branco);
+}
+
+.today-svg:hover {
+    fill: var(--cor-secundaria);
 }
