@@ -57,6 +57,16 @@
     font-weight: 700;
 } */
 
+::-moz-selection {
+    background: var(--cor-secundaria);
+    color: var(--preto);
+}
+
+::selection {
+    background: var(--cor-secundaria);
+    color: var(--preto);
+}
+
 body{
     font-family: 'Lexend', sans-serif;
     background-color: var(--darker-4) !important;
@@ -192,7 +202,11 @@ body{
 
 .sidebar-body li small {
     width: 24px;
-    font-size: 18px;
+}
+
+.badge-lista {
+    margin-left: auto;
+    font-size: 8pt !important;
 }
 
 .hoje {
@@ -200,7 +214,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 2rem 5rem;
     height: fit-content;
 }
 
