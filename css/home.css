@@ -59,7 +59,7 @@
 
 body{
     font-family: 'Lexend', sans-serif;
-    background-color: var(--darker-5) !important;
+    background-color: var(--darker-4) !important;
     color: var(--branco);
 }
 
@@ -83,13 +83,13 @@ body{
 .sidebar {
     grid-area: sidebar;
     background-color: var(--darker-6);
-    padding: 1rem;
 }
 
 .sidebar-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1.5rem 1.5rem 0 1.5rem;
 }
 
 .usuario {
@@ -120,39 +120,79 @@ body{
 }
 
 .sidebar-body {
+    padding: 0 1rem;
     margin-top: 2rem;
+    list-style: none;
 }
 
-.add-tarefa {
+.sidebar-body li {
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
     color: var(--branco);
-    width: fit-content;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 10px;
 }
 
-.add-tarefa:hover {
-    color: var(--cor-secundaria);
+.sidebar-body .active {
+    color: var(--preto);
+    background-color: var(--cor-secundaria);
+}
+
+.sidebar-body .active svg {
+    fill: var(--preto);
+}
+
+.sidebar-body .active:hover,
+.sidebar-body .active:hover svg {
+    background-color: var(--cor-secundaria);
+    color: var(--preto);
+    fill: var(--preto);
+}
+
+.sidebar-body li svg {
+    fill: var(--branco);
+}
+
+.sidebar-body li:hover {
+    background-color: var(--darker-4);
     cursor: pointer;
 }
 
-.add-tarefa:hover .adicionar-svg {
-    fill: var(--cor-secundaria);
+.add-tarefa {
+    color: var(--cor-secundaria) !important;
+    width: fit-content;
+    font-weight: 500;
 }
 
 .adicionar-svg {
-    width: 1.5rem;
-    fill: var(--branco);
-    margin-right: 0.5rem;
+    fill: var(--cor-secundaria) !important;
 }
 
 .sidebar-lista {
     list-style: none;
     color: var(--branco);
-    font-size: 14pt;
+    font-size: 12pt;
     padding: 0;
     margin-top: 2rem;
+    font-weight: 400;
 }
 
-.sidebar-lista .active{
-    font-weight: 500;
+.sidebar-separador {
+    border: 1px solid var(--darker-4);
+    opacity: 1;
+    border-radius: 1px;
+}
+
+.sidebar-body h6{
+    color: lightgray;
+    font-size: 10pt;
+}
+
+.sidebar-body li small {
+    width: 24px;
+    font-size: 18px;
 }
 
 .hoje {
@@ -200,6 +240,7 @@ body{
     fill: var(--cor-secundaria);
     cursor: pointer;
 }
+
 
 .filtros {
     display: flex;
