@@ -239,6 +239,19 @@ body{
     gap: 1rem;
 }
 
+.text-hoje h1 {
+    font-size: 16pt;
+    font-weight: 700;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+}
+
+.text-hoje svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--cor-secundaria);
+}
+
 #hoje{
     font-size: 16pt;
     font-weight: 700;
