@@ -346,7 +346,7 @@ button{
     color: var(--branco);
     font-size: 18px;
     font-weight: 400;
-    text-align: justify;
+    text-align: left;
     margin-top: 20px;
 
 }
@@ -415,6 +415,16 @@ button{
     margin-top: 2rem;
     padding: 10px 20px;
     border-radius: 25px;
+}
+
+.card-link:hover{
+    background-color: var(--cor-secundaria);
+    color: var(--preto);
+}
+
+#card-link-premium:hover{
+    background-color: var(--branco);
+    color: var(--preto);
 }
 
 .contact-container {
