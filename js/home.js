@@ -5,3 +5,15 @@ const ano = hoje.getFullYear();
 const data = `${dia}/${mes}/${ano}`;
 const dataElement = document.getElementById('hoje');
 dataElement.append(data);
+
+function concluirTarefa() {
+    const concluir = document.querySelectorAll('.concluir');
+    concluir.forEach((item) => {
+        const tarefaElement = item.closest('.tarefa');
+        item.addEventListener('click', () => {
+            tarefaElement.classList.toggle('tarefa-concluida');
+        });
+    });
+}
+
+concluirTarefa();
