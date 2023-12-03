@@ -1,21 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;400;500;600;700;800;900&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Lexend", sans-serif;
 }
+
 body {
-  background-color: #cd202d;
+  position: relative;
+  background-color: var(--darker-4); /* Sua cor de fundo */
+  min-height: 100vh;
 }
+
 .container {
-  background-color: #1b1b1b;
+  background-color: var(--darker-6);
   width: min(90%, 500px);
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
   padding: 4em 2em;
-  border-radius: 0.5em;
+  border-radius: 25px;
 }
 button {
   border: none;
@@ -29,13 +35,13 @@ button {
 }
 .btn {
   padding: 1em 2em;
-  border-radius: 0.5em;
+  border-radius: 10px;
   background-color: #3e3f43;
   color: #a9a7a7;
 }
 .btn-focus {
-  background-color: #cb202d;
-  color: #ffffff;
+  background-color: var(--cor-secundaria);
+  color: var(--preto);
 }
 .time-btn-container {
   display: flex;
