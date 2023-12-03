@@ -1,71 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;400;500;600;700;800;900&display=swap');
 
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: var(--branco);
+h1, h2, h3, h4, h5, h6, p, span, small, a, li, ul, ol, button, input, textarea {
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    font-family: 'Lexend', sans-serif !important;
 }
 
-.side-bar{
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-}
-
-.hoje{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#hoje{
-    font-size: 18pt;
-    font-weight: 700;
-    margin-top: auto;
-    margin-right: 1rem;
-}
-
-.icone-hoje{
-    width: 40px;
-    height: 40px;
-    margin-right: 1rem;
-}
-
-.circle {
-    display: block;
-}
-
-.check {
-    display: none;
-}
-
-.concluir:hover .circle {
-    display: none;
-}
-
-.concluir:hover .check {
-    display: block;
-
-.concluir{
-    margin-right: 1rem;
-}
-
-.titulo-tarefa{
-    font-size: 14pt;
-    font-weight: 700;
-} */
-
-::-moz-selection {
-    background: var(--cor-secundaria);
-    color: var(--preto);
-}
-
-::selection {
-    background: var(--cor-secundaria);
-    color: var(--preto);
-}
+body {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
 
 body{
     font-family: 'Lexend', sans-serif;
@@ -82,6 +27,8 @@ body{
     display: grid;
     grid:
         "sidebar hoje" 1fr
+        "sidebar tarefas" 1fr
+        "sidebar tarefas" 1fr
         "sidebar tarefas" 1fr
         "sidebar tarefas" 1fr
         "sidebar tarefas" 1fr
@@ -131,7 +78,7 @@ body{
 
 .sidebar-body {
     padding: 0 1rem;
-    margin-top: 2rem;
+    margin-top: 2rem !important;
     list-style: none;
 }
 
@@ -185,7 +132,7 @@ body{
     color: var(--branco);
     font-size: 12pt;
     padding: 0;
-    margin-top: 2rem;
+    margin-top: 2rem !important;
     font-weight: 400;
 }
 
@@ -205,7 +152,7 @@ body{
 }
 
 .badge-lista {
-    margin-left: auto;
+    margin-left: auto !important;
     font-size: 8pt !important;
 }
 
@@ -234,8 +181,8 @@ body{
 #hoje{
     font-size: 16pt;
     font-weight: 700;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
 }
 
 .today-svg {
@@ -271,4 +218,140 @@ body{
     width: fit-content;
     gap: 0.5rem;
     color: var(--branco);
+}
+
+.tarefas {
+    padding: 0 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tarefa {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 10px;
+    color: var(--branco);
+    background-color: var(--darker-6);
+    gap: 1rem;
+}
+
+.linha-tarefa-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.linha-tarefa-2 {
+    padding-left: calc(24px + 1rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.linha-tarefa-3 {
+    padding-left: calc(24px + 1rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper-titulo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.titulo-tarefa {
+    font-size: 14pt;
+    font-weight: 600;
+    margin: 0 !important;
+}
+
+.vence-tarefa {
+    color: var(--branco);
+    font-size: 12pt;
+    font-weight: 500;
+    background-color: var(--darker-4);
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+.descricao-tarefa {
+    font-size: 12pt;
+    font-weight: 400;
+    color: #b3b3b3;
+}
+
+.descricao-tarefa p {
+    margin: 0 !important;
+}
+
+.notas-tarefa {
+    font-size: 12pt;
+    font-weight: 400;
+    color: var(--branco);
+    width: fit-content;
+    text-wrap: nowrap;
+    margin-right: 1rem;
+}
+
+.notas-tarefa svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--branco);
+}
+
+.flashcards-tarefa {
+    font-size: 12pt;
+    font-weight: 400;
+    color: var(--branco);
+    width: fit-content;
+    text-wrap: nowrap;
+}
+
+.flashcards-tarefa svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--branco);
+}
+
+.circle {
+    display: block;
+    fill: var(--branco);
+}
+
+.check {
+    display: none;
+    fill: var(--cor-secundaria);
+}
+
+.concluir:hover .circle {
+    display: none;
+}
+
+.concluir:hover .check {
+    display: block;
+    cursor: pointer;
+}
+
+@keyframes slideOutUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    99% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        display: none;
+    }
+}
+
+#tarefa-1 {
+    animation: slideOutUp 1s forwards;
 }
