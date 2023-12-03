@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pomodoro Timer</title>
+    <title>Pomodoro Timer - CosmicTasks</title>
     <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      href="css/all.min.css"
     />
     <!-- Google Fonts -->
     <link
@@ -14,22 +14,23 @@
       rel="stylesheet"
     />
     <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/pomodoro.css" />
   </head>
   <body>
     <div class="container">
       <div class="section-container">
-        <button id="focus" class="btn btn-timer btn-focus">Focus</button>
-        <button id="shortbreak" class="btn btn-shortbreak">Short Break</button>
-        <button id="longbreak" class="btn btn-longbreak">Long Break</button>
+        <button id="focus" class="btn btn-timer btn-focus">Focar</button>
+        <button id="shortbreak" class="btn btn-shortbreak">Pausa curta</button>
+        <button id="longbreak" class="btn btn-longbreak">Pausa longa</button>
       </div>
       <div class="time-btn-container">
         <span id="time"></span>
         <div class="btn-container">
-          <button id="btn-start" class="show">Start</button>
-          <button id="btn-pause" class="hide">Pause</button>
+          <button id="btn-start" class="show">Iniciar</button>
+          <button id="btn-pause" class="hide">Pausar</button>
           <button id="btn-reset" class="hide">
-            <i class="fa-solid fa-rotate-right"></i>
+            <svg fill="var(--branco)" xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M463.5 224H472c13.3 0 24-10.7 24-24V72c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2 5.2L413.4 96.6c-87.6-86.5-228.7-86.2-315.8 1c-87.5 87.5-87.5 229.3 0 316.8s229.3 87.5 316.8 0c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0c-62.5 62.5-163.8 62.5-226.3 0s-62.5-163.8 0-226.3c62.2-62.2 162.7-62.5 225.3-1L327 183c-6.9 6.9-8.9 17.2-5.2 26.2s12.5 14.8 22.2 14.8H463.5z"/></svg>
           </button>
         </div>
       </div>
