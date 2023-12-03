@@ -1,5 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;400;500;600;700;800;900&display=swap');
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 2s;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+.slide-in-from-left {
+    animation: slideInFromLeft 1s ease-out;
+}
+
+@keyframes zoomIn {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .tarefa {
+    animation: zoomIn 1s ease-in;
+  }
+
+@keyframes slideInFromUp {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+.slide-in-from-up {
+    animation: slideInFromUp 1s ease-out;
+}
+
+@keyframes slideInFromDown {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
 h1, h2, h3, h4, h5, h6, p, span, small, a, li, ul, ol, button, input, textarea {
     margin: 0 !important;
     box-sizing: border-box !important;
@@ -10,7 +71,7 @@ body {
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
-  }
+}
 
 body{
     font-family: 'Lexend', sans-serif;
