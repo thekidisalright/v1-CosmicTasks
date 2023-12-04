@@ -37,8 +37,14 @@
         </div>
       </div>
     </div>
+    <button id="back-button">Voltar</button>
 
     <!-- Script -->
     <script src="js/pomodoro.js"></script>
+    <script>
+      document.getElementById('back-button').addEventListener('click', function() {
+    window.history.back();
+});
+    </script>
   </body>
 </html>

@@ -23,6 +23,17 @@ body {
   padding: 4em 2em;
   border-radius: 25px;
 }
+
+#back-button{
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  background-color: var(--cor-secundaria);
+  color: var(--preto);
+  padding: 0.5em 1em;
+  border-radius: 10px;
+}
+
 button {
   border: none;
   outline: none;

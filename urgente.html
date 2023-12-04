@@ -46,7 +46,7 @@
                 d="M 12 2 C 6.486 2 2 6.486 2 12 C 2 17.514 6.486 22 12 22 C 17.514 22 22 17.514 22 12 C 22 6.486 17.514 2 12 2 z M 12 4 C 16.411 4 20 7.589 20 12 C 20 16.411 16.411 20 12 20 C 7.589 20 4 16.411 4 12 C 4 7.589 7.589 4 12 4 z M 11 8 L 11 11 L 8 11 L 8 13 L 11 13 L 11 16 L 13 16 L 13 13 L 16 13 L 16 11 L 13 11 L 13 8 L 11 8 z"
               ></path>
             </svg>
-            <span class="add-tarefa-span">Adicionar tarefa</span>
+            <span class="add-tarefa-span" data-bs-toggle="modal" data-bs-target="#taskModal">Adicionar tarefa</span>
           </li>
           <li
             class="position-relative"
@@ -130,7 +130,7 @@
                 d="M 12 2 C 6.486 2 2 6.486 2 12 C 2 17.514 6.486 22 12 22 C 17.514 22 22 17.514 22 12 C 22 6.486 17.514 2 12 2 z M 12 4 C 16.411 4 20 7.589 20 12 C 20 16.411 16.411 20 12 20 C 7.589 20 4 16.411 4 12 C 4 7.589 7.589 4 12 4 z M 11 8 L 11 11 L 8 11 L 8 13 L 11 13 L 11 16 L 13 16 L 13 13 L 16 13 L 16 11 L 13 11 L 13 8 L 11 8 z"
               ></path>
             </svg>
-            <span class="add-tarefa">Nova lista</span>
+            <span class="add-tarefa" data-bs-toggle="modal" data-bs-target="#listModal">Nova lista</span>
           </li>
           <li class="position-relative">
             <small>&#x2797;</small>
@@ -172,7 +172,7 @@
                 />
               </g>
             </svg>
-            <span class="nome-lista">Frânces</span>
+            <span class="nome-lista">Francês</span>
             <span class="badge badge-lista text-bg-secondary">3</span>
             <a href="frances.html" class="stretched-link"></a>
           </li>
@@ -260,7 +260,7 @@
           <div class="linha-tarefa-2">
             <div class="descricao-tarefa">
               <p>
-                Apresentar trabalho sobre a filosofa Hannah Arendt, sobre sua vida e suas obras.
+                Apresentar trabalho sobre a filósofa Hannah Arendt, sobre sua vida e suas obras.
               </p>
             </div>
           </div>
@@ -279,75 +279,77 @@
       </div>
     </section>
 
-    <div
-    class="modal fade"
-    id="modalTarefaArendt"
-    data-bs-backdrop="static"
-    data-bs-keyboard="false"
-    tabindex="-1"
-    aria-labelledby="labelModalTarefaArendt"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="labelModalTarefaArendt">
-            Modal title
-          </h1>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="modal-body">...</div>
-        <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-          >
-            Close
-          </button>
-          <button type="button" class="btn btn-primary">Understood</button>
+    <div class="modal fade" id="taskModal" tabindex="-1" aria-labelledby="taskModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content modalAdicionarTarefa">
+          <div class="modal-header">
+            <h5 class="modal-title" id="taskModalLabel">Criar Tarefa</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body">
+            <form id="task-form">
+              <div class="mb-3">
+                <label for="task-name" class="form-label">Nome da Tarefa</label>
+                <input type="text" class="form-control" id="task-name" required>
+              </div>
+              <div class="mb-3">
+                <label for="task-description" class="form-label">Descrição da Tarefa</label>
+                <textarea class="form-control" id="task-description" rows="3" required></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="task-category" class="form-label">Categoria</label>
+                <select class="form-select" id="task-category" required>
+                    <option selected>Escolha...</option>
+                    <option value="1">Seminário</option>
+                    <option value="2">Urgente</option>
+                    <option value="3">Tarefa de casa</option>
+                </select>
+            </div>
+              <div class="mb-3">
+                <label for="task-date" class="form-label">Data de Vencimento</label>
+                <input type="date" class="form-control" id="task-date" required>
+              </div>
+              <div class="mb-3">
+                <label for="task-list" class="form-label">Lista</label>
+                <select class="form-select" id="task-list" required>
+                    <option selected>Escolha...</option>
+                    <option value="1">Matemática Básica</option>
+                    <option value="2">Filosofia</option>
+                    <option value="3">Francês</option>
+                </select>
+            </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-fechar" data-bs-dismiss="modal">Fechar</button>
+            <button type="button" class="btn" id="save-task">Salvar Tarefa</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-    <div
-      class="modal fade"
-      id="modalConfiguracoes"
-      data-bs-backdrop="static"
-      data-bs-keyboard="false"
-      tabindex="-1"
-      aria-labelledby="staticBackdropLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
+    <div class="modal fade" id="listModal" tabindex="-1" aria-labelledby="listModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content modalAdicionarLista">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">
-              Modal title
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+            <h5 class="modal-title" id="listModalLabel">Criar Lista</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
           </div>
-          <div class="modal-body">...</div>
+          <div class="modal-body">
+            <form id="list-form">
+              <div class="mb-3">
+                <label for="list-name" class="form-label">Nome da Lista</label>
+                <input type="text" class="form-control" id="list-name" required>
+              </div>
+              <div class="mb-3">
+                <label for="list-emoji" class="form-label">Emoji da Lista</label>
+                <input type="text" class="form-control" id="list-emoji" required>
+              </div>
+            </form>
+          </div>
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Understood</button>
+            <button type="button" class="btn btn-fechar" data-bs-dismiss="modal">Fechar</button>
+            <button type="button" class="btn" id="save-list">Salvar Lista</button>
           </div>
         </div>
       </div>

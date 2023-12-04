@@ -479,11 +479,191 @@ body{
 .accordion-button:not(.collapsed) {
     background-color: var(--darker-4) !important; /* Altere para a cor de fundo desejada quando o accordion estiver aberto */
     color: var(--branco) !important; /* Altere para a cor de texto desejada quando o accordion estiver aberto */
-    fill: var(--branco) !important; /* Altere para a cor de texto desejada quando o accordion estiver aberto */);
+    fill: var(--branco) !important; /* Altere para a cor de texto desejada quando o accordion estiver aberto */
 }
 
 .accordion-body {
+    background-color: var(--darker-4) !important; /* Altere para a cor de fundo desejada */
+    color: var(--branco) !important; /* Altere para a cor de texto desejada */
+    font-family: 'Lexend', sans-serif !important; /* Altere para a fonte desejada */
+}
+
+.card {
     background-color: var(--darker-6) !important; /* Altere para a cor de fundo desejada */
     color: var(--branco) !important; /* Altere para a cor de texto desejada */
     font-family: 'Lexend', sans-serif !important; /* Altere para a fonte desejada */
+    border: none !important; /* Remove a borda padrão */
+    max-height: 200px !important;
+    overflow: hidden !important;
+    border-radius: 10px !important;
+}
+
+.card-title {
+    margin-bottom: 1rem !important;
+    text-overflow: ellipsis; /* Adiciona os três pontos quando o texto estiver em overflow */
+    overflow: hidden; /* Esconde o texto que estiver em overflow */
+    white-space: nowrap; /* Impede que o texto quebre para a próxima linha */
+    width: 100%; /* Define uma largura para o elemento */
+}
+
+.card-text {
+    text-overflow: ellipsis; /* Adiciona os três pontos quando o texto estiver em overflow */
+    overflow: hidden; /* Esconde o texto que estiver em overflow */
+    width: 100%; /* Define uma largura para o elemento */
+    color: #b3b3b3 !important;
+}
+
+#notas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.notas .card {
+    width: 100% !important;
+    background-color: var(--branco) !important;
+    height: fit-content !important;
+    max-height: none !important;
+    overflow: visible !important;
+    font-family: 'Helvetica Neue', Arial, sans-serif !important;
+    color: #333 !important;
+    line-height: 1.6 !important;
+    padding: 20px !important;
+    border-radius: 3px !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24) !important;
+}
+
+.notas .card h1, .notas .card h2, .notas .card h3 {
+    margin-top: 20px !important;
+    margin-bottom: 10px !important;
+}
+
+.notas .card h1 {
+    font-size: 32px !important;
+    border-bottom: 1px solid #eaecef !important;
+    padding-bottom: 0.3em !important;
+}
+
+.notas .card h2 {
+    font-size: 24px !important;
+}
+
+.notas .card h3 {
+    font-size: 18px !important;
+}
+
+.notas .card p {
+    margin: 10px 0 !important;
+}
+
+.notas .card ul {
+    margin: 10px 0 !important;
+    padding-left: 20px !important;
+}
+
+.notas .card ul li {
+    margin-bottom: 5px !important;
+}
+
+.modal-content {
+    overflow: auto !important;
+}
+
+#flashcards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+#flashcards .card {
+    background-color: var(--darker-6); /* Altere para a cor de fundo desejada */
+    color: var(--branco); /* Altere para a cor de texto desejada */
+    font-family: 'Lexend', sans-serif; /* Altere para a fonte desejada */
+    margin-bottom: 20px; /* Adiciona um espaço entre os cards */
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+#flashcards .card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%; /* Adicione uma altura se necessário */
+    backface-visibility: hidden;
+    transition: transform 2s;
+}
+
+#flashcards .card-face.front {
+    z-index: 2;
+}
+
+#flashcards .card.flip .card-face.front {
+    transform: rotateY(180deg);
+}
+
+#flashcards .card-face.back {
+    transform: rotateY(180deg);
+}
+
+#flashcards .card.flip .card-face.back {
+    transform: rotateY(0deg);
+}
+
+
+#flashcards .card-title {
+    font-size: 1.5rem; /* Altere para o tamanho de fonte desejado */
+    color: var(--branco); /* Altere para a cor de texto desejada */
+}
+
+#flashcards .card-text {
+    font-size: 1rem; /* Altere para o tamanho de fonte desejado */
+    color: var(--branco); /* Altere para a cor de texto desejada */
+    margin-bottom: 1rem !important;
+}
+
+#flashcards .btn {
+    background-color: var(--darker-4); /* Altere para a cor de fundo desejada */
+    color: var(--branco); /* Altere para a cor de texto desejada */
+}
+
+.modalAdicionarTarefa, .modalAdicionarLista {
+    background-color: #f8f9fa; /* Altere para a cor de fundo desejada */
+    color: #343a40; /* Altere para a cor de texto desejada */
+    font-family: 'Arial', sans-serif; /* Altere para a fonte desejada */
+}
+
+.modalAdicionarTarefa .modal-header,
+.modalAdicionarLista .modal-header {
+    border-bottom: 1px solid #dee2e6; /* Altere para a cor de borda desejada */
+}
+
+.modalAdicionarTarefa .modal-title,
+.modalAdicionarLista .modal-title {
+    font-size: 1.5rem; /* Altere para o tamanho de fonte desejado */
+}
+
+.modalAdicionarTarefa .modal-body,
+.modalAdicionarLista .modal-body {
+    font-size: 1rem; /* Altere para o tamanho de fonte desejado */
+}
+
+.modalAdicionarTarefa .modal-footer,
+.modalAdicionarLista .modal-footer {
+    border-top: 1px solid #dee2e6; /* Altere para a cor de borda desejada */
+}
+
+.modalAdicionarTarefa #save-task,
+.modalAdicionarLista #save-list {
+    background-color: var(--cor-principal) !important; /* Altere para a cor de fundo desejada */
+    border-color: var(--darker-4) !important; /* Altere para a cor de borda desejada */
+    color: var(--branco) !important; /* Altere para a cor de texto desejada */
+    margin-left: 1rem !important;
+}
+
+.modalAdicionarTarefa .btn-fechar,
+.modalAdicionarLista .btn-fechar {
+    background-color: var(--cor-secundaria); /* Altere para a cor de fundo desejada */
 }
