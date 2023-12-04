@@ -348,13 +348,22 @@ button{
     font-weight: 400;
     text-align: left;
     margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
 
+.sections p img {
+    width: 250px;
 }
 
 .wrapper {
     max-width: 70rem;
     margin-inline: auto;
     padding: 25px 100px;
+}
+
+.wrapper img {
+    width: 250px;
 }
 
 #basico {
