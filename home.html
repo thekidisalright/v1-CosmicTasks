@@ -251,7 +251,7 @@
                 />
               </svg>
               </div>
-              <h2 class="titulo-tarefa">Trabalho Hannah Arendt</h2>
+              <h2 class="titulo-tarefa position-relative">Trabalho Hannah Arendt<button class="btn stretched-link opacity-0"  data-bs-toggle="modal" data-bs-target="#modalTarefaArendt"></button></h2>
             </div>
             <div class="vence-tarefa">
               <span>04/12/2023</span>
@@ -269,8 +269,9 @@
               <span class="badge badge-categoria" style="background-color: hsla(240,100%,50%, 0.3);">Seminário</span>
               <span class="badge badge-categoria" style="background-color: hsla(0,100%,50%, 0.3);">Urgente</span>
             </div>
-            <div class="lista-tarefa">
+            <div class="lista-tarefa position-relative">
               <span>&#x1F4AD; Filosofia</span>
+              <a href="filosofia.html" class="stretched-link"></a>
             </div>
           </div>
         </div>
@@ -302,7 +303,7 @@
                 />
               </svg>
               </div>
-              <h2 class="titulo-tarefa">Les verbes irréguliers</h2>
+              <h2 class="titulo-tarefa position-relative">Les verbes irréguliers<button class="btn stretched-link opacity-0"  data-bs-toggle="modal" data-bs-target="#modalTarefaVerbos"></button></h2>
             </div>
             <div class="vence-tarefa">
               <span>04/12/2023</span>
@@ -319,7 +320,7 @@
             <div class="categorias">
 
             </div>
-            <div class="lista-tarefa">
+            <div class="lista-tarefa position-relative">
               <span>            <svg
                 class="svg-lista"
                 width="22"
@@ -347,6 +348,7 @@
                   />
                 </g>
               </svg> Francês</span>
+              <a href="frances.html" class="stretched-link"></a>
             </div>
           </div>
         </div>
@@ -393,12 +395,13 @@
     <script src="js/home.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script>
-      const tooltipTriggerList = document.querySelectorAll(
-        '[data-bs-toggle="tooltip"]'
-      );
-      const tooltipList = [...tooltipTriggerList].map(
-        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
-      );
+      const hoje = new Date();
+const dia = hoje.getDate().toString().padStart(2, '0');
+const mes = (hoje.getMonth() + 1).toString().padStart(2, '0');
+const ano = hoje.getFullYear();
+const data = `${dia}/${mes}/${ano}`;
+const dataElement = document.getElementById('hoje');
+dataElement.append(data);
     </script>
   </body>
 </html>
