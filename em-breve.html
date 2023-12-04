@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarefas de hoje - CosmicTasks</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+  </head>
+  <body>
+    <section class="layout">
+      <div class="sidebar slide-in-from-left">
+        <div class="sidebar-header">
+          <div class="usuario">
+            <img src="images/home/imagem_usuario.svg" class="foto-usuario" />
+            <span class="nome-usuario">Larissa Silva</span>
+          </div>
+          <!-- <svg
+            data-bs-toggle="modal"
+            data-bs-target="#modalConfiguracoes"
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 -960 960 960"
+            width="24"
+            class="configuracoes-svg"
+          >
+            <path
+              d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z"
+            />
+          </svg> -->
+        </div>
+        <ul class="sidebar-body">
+          <li class="add-tarefa">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              class="adicionar-svg"
+            >
+              <path
+                d="M 12 2 C 6.486 2 2 6.486 2 12 C 2 17.514 6.486 22 12 22 C 17.514 22 22 17.514 22 12 C 22 6.486 17.514 2 12 2 z M 12 4 C 16.411 4 20 7.589 20 12 C 20 16.411 16.411 20 12 20 C 7.589 20 4 16.411 4 12 C 4 7.589 7.589 4 12 4 z M 11 8 L 11 11 L 8 11 L 8 13 L 11 13 L 11 16 L 13 16 L 13 13 L 16 13 L 16 11 L 13 11 L 13 8 L 11 8 z"
+              ></path>
+            </svg>
+            <span class="add-tarefa-span">Adicionar tarefa</span>
+          </li>
+          <li
+            class="position-relative"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M 6 1 L 6 3 L 5 3 C 3.9 3 3 3.9 3 5 L 3 19 C 3 20.1 3.9 21 5 21 L 19 21 C 20.1 21 21 20.1 21 19 L 21 5 C 21 3.9 20.1 3 19 3 L 18 3 L 18 1 L 16 1 L 16 3 L 8 3 L 8 1 L 6 1 z M 5 8 L 19 8 L 19 19 L 5 19 L 5 8 z M 12.75 10 L 9 11.455078 L 9 13.068359 L 11 12.365234 L 11 17 L 13 17 L 13 10 L 12.75 10 z"
+              ></path>
+            </svg>
+            <span>Tarefas de hoje</span>
+            <a href="home.html" class="stretched-link"></a>
+          </li>
+          <li class="position-relative">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="20"
+              height="20"
+              viewBox="0 0 50 50"
+            >
+              <path
+                d="M 14.125 0 C 13.996094 0.0078125 13.875 0.03125 13.75 0.09375 C 13.257813 0.339844 13.066406 0.945313 13.3125 1.4375 L 15.5 5.84375 C 15.675781 6.195313 16.039063 6.40625 16.40625 6.40625 C 16.554688 6.40625 16.699219 6.351563 16.84375 6.28125 C 17.335938 6.035156 17.527344 5.429688 17.28125 4.9375 L 15.09375 0.5625 C 14.910156 0.191406 14.515625 -0.0234375 14.125 0 Z M 35.875 0 C 35.484375 -0.0234375 35.09375 0.191406 34.90625 0.5625 L 32.71875 4.9375 C 32.472656 5.429688 32.664063 6.035156 33.15625 6.28125 C 33.300781 6.351563 33.445313 6.40625 33.59375 6.40625 C 33.960938 6.40625 34.324219 6.195313 34.5 5.84375 L 36.6875 1.4375 C 36.933594 0.945313 36.742188 0.339844 36.25 0.09375 C 36.125 0.03125 36.003906 0.0078125 35.875 0 Z M 21 10.90625 C 17.003906 10.90625 13.671875 13.835938 13.09375 17.875 L 10.28125 39 L 39.5 39 L 36.6875 17.84375 C 36.128906 13.925781 32.734375 11.019531 28.59375 10.90625 Z M 1.0625 11 C 0.671875 10.976563 0.277344 11.191406 0.09375 11.5625 C -0.152344 12.054688 0.0703125 12.660156 0.5625 12.90625 L 4.9375 15.09375 C 5.082031 15.164063 5.257813 15.1875 5.40625 15.1875 C 5.773438 15.1875 6.105469 15.007813 6.28125 14.65625 C 6.527344 14.164063 6.335938 13.558594 5.84375 13.3125 L 1.4375 11.09375 C 1.3125 11.03125 1.191406 11.007813 1.0625 11 Z M 48.9375 11 C 48.808594 11.007813 48.6875 11.03125 48.5625 11.09375 L 44.15625 13.3125 C 43.664063 13.558594 43.472656 14.164063 43.71875 14.65625 C 43.894531 15.007813 44.226563 15.1875 44.59375 15.1875 C 44.742188 15.1875 44.917969 15.167969 45.0625 15.09375 L 49.4375 12.90625 C 49.929688 12.660156 50.152344 12.054688 49.90625 11.5625 C 49.71875 11.191406 49.328125 10.976563 48.9375 11 Z M 5.34375 26.40625 C 5.214844 26.414063 5.0625 26.4375 4.9375 26.5 L 0.5625 28.71875 C 0.0703125 28.964844 -0.152344 29.570313 0.09375 30.0625 C 0.269531 30.414063 0.632813 30.59375 1 30.59375 C 1.148438 30.59375 1.292969 30.570313 1.4375 30.5 L 5.84375 28.28125 C 6.335938 28.035156 6.527344 27.429688 6.28125 26.9375 C 6.097656 26.566406 5.734375 26.382813 5.34375 26.40625 Z M 44.65625 26.40625 C 44.265625 26.382813 43.902344 26.597656 43.71875 26.96875 C 43.472656 27.460938 43.664063 28.035156 44.15625 28.28125 L 48.5625 30.5 C 48.707031 30.570313 48.851563 30.59375 49 30.59375 C 49.367188 30.59375 49.730469 30.410156 49.90625 30.0625 C 50.152344 29.570313 49.929688 28.964844 49.4375 28.71875 L 45.0625 26.5 C 44.9375 26.4375 44.785156 26.414063 44.65625 26.40625 Z M 7 41 C 6.449219 41 6 41.445313 6 42 L 6 49 C 6 49.554688 6.449219 50 7 50 L 43 50 C 43.554688 50 44 49.554688 44 49 L 44 42 C 44 41.445313 43.554688 41 43 41 Z"
+              ></path>
+            </svg>
+            <span>Urgente</span>
+            <a href="urgente.html" class="stretched-link"></a>
+          </li>
+          <li class="active position-relative">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="20"
+              height="20"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M 143.68945 17 A 13.51 13.51 0 0 0 130.18945 30.5 L 130.18945 85.390625 A 8.51 8.51 0 0 0 138.68945 93.890625 L 189.28906 93.890625 A 8.51 8.51 0 0 0 197.78906 85.390625 L 197.78906 30.5 A 13.51 13.51 0 0 0 184.28906 17 L 143.68945 17 z M 327.69922 17 A 13.51 13.51 0 0 0 314.19922 30.5 L 314.19922 85.390625 A 8.51 8.51 0 0 0 322.69922 93.890625 L 373.31055 93.890625 A 8.5 8.5 0 0 0 381.80078 85.390625 L 381.80078 30.5 A 13.51 13.51 0 0 0 368.30078 17 L 327.69922 17 z M 90.109375 74.869141 A 46.3 46.3 0 0 0 43.869141 121.11914 L 43.869141 189 L 115.75977 189 A 30.05 30.05 0 0 1 145.59961 162.13086 L 366.39062 162.13086 A 30 30 0 0 1 396.23047 189 L 468.13086 189 L 468.13086 121.11914 A 46.31 46.31 0 0 0 421.88086 74.869141 L 393.80078 74.869141 L 393.80078 85.390625 A 20.51 20.51 0 0 1 373.31055 105.89062 L 322.69922 105.89062 A 20.52 20.52 0 0 1 302.19922 85.390625 L 302.19922 74.869141 L 209.78906 74.869141 L 209.78906 85.390625 A 20.52 20.52 0 0 1 189.28906 105.89062 L 138.68945 105.89062 A 20.52 20.52 0 0 1 118.18945 85.390625 L 118.18945 74.869141 L 90.109375 74.869141 z M 145.59961 174.11914 C 135.62761 174.11914 127.59961 182.14714 127.59961 192.11914 L 127.59961 193.74023 C 127.59961 203.71223 135.62761 211.74023 145.59961 211.74023 L 366.39062 211.74023 C 376.36262 211.74023 384.39062 203.71223 384.39062 193.74023 L 384.39062 192.11914 C 384.39062 182.14714 376.36262 174.11914 366.39062 174.11914 L 145.59961 174.11914 z M 43.869141 201 L 43.869141 452.24023 A 42.8 42.8 0 0 0 86.619141 495 L 425.36914 495 A 42.81 42.81 0 0 0 468.13086 452.24023 L 468.13086 201 L 432.76953 201 L 432.76953 417.35938 A 44.15 44.15 0 0 1 388.61914 461.50977 L 123.36914 461.50977 A 44.15 44.15 0 0 1 79.220703 417.35938 L 79.220703 201 L 43.869141 201 z M 256 236.25 A 92 92 0 1 0 348 328.25 A 92 92 0 0 0 256 236.25 z M 251.79492 268.00195 A 6 6 0 0 1 257.61914 274 L 257.61914 320.09961 L 292.5 320.09961 A 6 6 0 0 1 292.5 332.09961 L 251.61914 332.09961 A 6 6 0 0 1 245.61914 326.09961 L 245.61914 274 A 6 6 0 0 1 251.79492 268.00195 z"
+              ></path>
+            </svg>
+            <span>Em breve</span>
+            <a href="em-breve.html" class="stretched-link"></a>
+          </li>
+          <li class="position-relative">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="20"
+              height="20"
+              viewBox="0 0 50 50"
+            >
+              <path
+                d="M 18.5 1 C 17.672 1 17 1.672 17 2.5 L 17 8.5 C 17 9.328 17.672 10 18.5 10 L 31.5 10 C 32.328 10 33 9.328 33 8.5 L 33 2.5 C 33 1.672 32.328 1 31.5 1 L 18.5 1 z M 9 3 C 7.346 3 6 4.346 6 6 L 6 44 C 6 45.654 7.346 47 9 47 L 41 47 C 42.158 47 43.164062 46.341906 43.664062 45.378906 C 43.878062 44.965906 44 44.496 44 44 L 44 6 C 44 4.346 42.654 3 41 3 L 35 3 L 35 8 L 39 8 L 39 42 L 11 42 L 11 8 L 15 8 L 15 3 L 9 3 z M 31.59375 17 C 30.977875 17.000125 30.362578 17.235578 29.892578 17.705078 L 28.998047 18.597656 L 32.402344 22.001953 C 32.399344 22.003953 33.294922 21.107422 33.294922 21.107422 C 34.234922 20.167422 34.235875 18.644078 33.296875 17.705078 C 32.826375 17.235078 32.209625 16.999875 31.59375 17 z M 27.587891 20.003906 L 16.707031 30.90625 L 16.021484 34.414062 C 15.953484 34.762062 16.260375 35.069953 16.609375 35.001953 L 20.117188 34.314453 L 30.996094 23.412109 L 27.587891 20.003906 z"
+              ></path>
+            </svg>
+            <span>Todas as tarefas</span>
+            <a href="todas-tarefas.html" class="stretched-link"></a>
+          </li>
+          <hr class="sidebar-separador" />
+          <h6>Listas de tarefas</h6>
+          <li class="position-relative">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              class="adicionar-svg"
+            >
+              <path
+                d="M 12 2 C 6.486 2 2 6.486 2 12 C 2 17.514 6.486 22 12 22 C 17.514 22 22 17.514 22 12 C 22 6.486 17.514 2 12 2 z M 12 4 C 16.411 4 20 7.589 20 12 C 20 16.411 16.411 20 12 20 C 7.589 20 4 16.411 4 12 C 4 7.589 7.589 4 12 4 z M 11 8 L 11 11 L 8 11 L 8 13 L 11 13 L 11 16 L 13 16 L 13 13 L 16 13 L 16 11 L 13 11 L 13 8 L 11 8 z"
+              ></path>
+            </svg>
+            <span class="add-tarefa">Nova lista</span>
+          </li>
+          <li class="position-relative">
+            <small>&#x2797;</small>
+            <span>Matemática Básica</span>
+            <span class="badge badge-lista text-bg-secondary">1</span>
+            <a href="matematica-basica.html" class="stretched-link"></a>
+          </li>
+          <li class="position-relative">
+            <small>&#x1F4AD;</small>
+            <span>Filosofia</span>
+            <span class="badge badge-lista text-bg-secondary">1</span>
+            <a href="filosofia.html" class="stretched-link"></a>
+          </li>
+          <li class="position-relative">
+            <svg
+              class="svg-lista"
+              width="22"
+              height="22"
+              id="emoji"
+              viewBox="0 0 72 72"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="color">
+                <rect x="5" y="17" width="62" height="38" fill="#fff" />
+                <rect x="5" y="17" width="21" height="38" fill="#1e50a0" />
+                <rect x="46" y="17" width="21" height="38" fill="#d22f27" />
+              </g>
+              <g id="line">
+                <rect
+                  x="5"
+                  y="17"
+                  width="62"
+                  height="38"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+            <span class="nome-lista">Frânces</span>
+            <span class="badge badge-lista text-bg-secondary">3</span>
+            <a href="frances.html" class="stretched-link"></a>
+          </li>
+          <hr class="sidebar-separador" />
+          <li class="position-relative">
+            <small> &#x1F345;</small>
+            <span>Pomodoro Timer</span>
+            <a href="pomodoro.html" class="stretched-link"></a>
+          </li>
+          <li class="position-relative">
+            <small>&#x1F4D1;</small>
+            <span>Notas</span>
+            <a href="notas.html" class="stretched-link"></a>
+          </li>
+          <li class="position-relative">
+            <small>&#x1F5C3;&#xFE0F;</small>
+            <span>Flashcards</span>
+            <a href="flashcards.html" class="stretched-link"></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="hoje slide-in-from-up">
+        <div class="text-hoje">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="20"
+              height="20"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M 143.68945 17 A 13.51 13.51 0 0 0 130.18945 30.5 L 130.18945 85.390625 A 8.51 8.51 0 0 0 138.68945 93.890625 L 189.28906 93.890625 A 8.51 8.51 0 0 0 197.78906 85.390625 L 197.78906 30.5 A 13.51 13.51 0 0 0 184.28906 17 L 143.68945 17 z M 327.69922 17 A 13.51 13.51 0 0 0 314.19922 30.5 L 314.19922 85.390625 A 8.51 8.51 0 0 0 322.69922 93.890625 L 373.31055 93.890625 A 8.5 8.5 0 0 0 381.80078 85.390625 L 381.80078 30.5 A 13.51 13.51 0 0 0 368.30078 17 L 327.69922 17 z M 90.109375 74.869141 A 46.3 46.3 0 0 0 43.869141 121.11914 L 43.869141 189 L 115.75977 189 A 30.05 30.05 0 0 1 145.59961 162.13086 L 366.39062 162.13086 A 30 30 0 0 1 396.23047 189 L 468.13086 189 L 468.13086 121.11914 A 46.31 46.31 0 0 0 421.88086 74.869141 L 393.80078 74.869141 L 393.80078 85.390625 A 20.51 20.51 0 0 1 373.31055 105.89062 L 322.69922 105.89062 A 20.52 20.52 0 0 1 302.19922 85.390625 L 302.19922 74.869141 L 209.78906 74.869141 L 209.78906 85.390625 A 20.52 20.52 0 0 1 189.28906 105.89062 L 138.68945 105.89062 A 20.52 20.52 0 0 1 118.18945 85.390625 L 118.18945 74.869141 L 90.109375 74.869141 z M 145.59961 174.11914 C 135.62761 174.11914 127.59961 182.14714 127.59961 192.11914 L 127.59961 193.74023 C 127.59961 203.71223 135.62761 211.74023 145.59961 211.74023 L 366.39062 211.74023 C 376.36262 211.74023 384.39062 203.71223 384.39062 193.74023 L 384.39062 192.11914 C 384.39062 182.14714 376.36262 174.11914 366.39062 174.11914 L 145.59961 174.11914 z M 43.869141 201 L 43.869141 452.24023 A 42.8 42.8 0 0 0 86.619141 495 L 425.36914 495 A 42.81 42.81 0 0 0 468.13086 452.24023 L 468.13086 201 L 432.76953 201 L 432.76953 417.35938 A 44.15 44.15 0 0 1 388.61914 461.50977 L 123.36914 461.50977 A 44.15 44.15 0 0 1 79.220703 417.35938 L 79.220703 201 L 43.869141 201 z M 256 236.25 A 92 92 0 1 0 348 328.25 A 92 92 0 0 0 256 236.25 z M 251.79492 268.00195 A 6 6 0 0 1 257.61914 274 L 257.61914 320.09961 L 292.5 320.09961 A 6 6 0 0 1 292.5 332.09961 L 251.61914 332.09961 A 6 6 0 0 1 245.61914 326.09961 L 245.61914 274 A 6 6 0 0 1 251.79492 268.00195 z"
+              ></path>
+            </svg>
+          <h1>Em breve</h1>
+        </div>
+      </div>
+
+      <div class="tarefas">
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                  04/12/2023
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                <div class="accordion-body">
+                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                  Accordion Item #2
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                  Accordion Item #3
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="tarefa">
+          <div class="linha-tarefa-1">
+            <div class="wrapper-titulo">
+              <div class="concluir">
+                <svg
+                class="check"
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                viewBox="0 -960 960 960"
+                width="24"
+              >
+                <path
+                  d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                />
+              </svg>
+              <svg
+                class="circle"
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                viewBox="0 -960 960 960"
+                width="24"
+              >
+                <path
+                  d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                />
+              </svg>
+              </div>
+              <h2 class="titulo-tarefa position-relative">Trabalho Hannah Arendt<button class="btn stretched-link opacity-0"  data-bs-toggle="modal" data-bs-target="#modalTarefaArendt"></button></h2>
+            </div>
+            <div class="vence-tarefa">
+              <span>04/12/2023</span>
+            </div>
+          </div>
+          <div class="linha-tarefa-2">
+            <div class="descricao-tarefa">
+              <p>
+                Apresentar trabalho sobre a filosofa Hannah Arendt, sobre sua vida e suas obras.
+              </p>
+            </div>
+          </div>
+          <div class="linha-tarefa-3">
+            <div class="categorias">
+              <span class="badge badge-categoria" style="background-color: hsla(240,100%,50%, 0.3);">Seminário</span>
+              <span class="badge badge-categoria" style="background-color: hsla(0,100%,50%, 0.3);">Urgente</span>
+            </div>
+            <div class="lista-tarefa position-relative">
+              <span>&#x1F4AD; Filosofia</span>
+              <a href="filosofia.html" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="tarefa">
+          <div class="linha-tarefa-1">
+            <div class="wrapper-titulo">
+              <div class="concluir">
+                <svg
+                class="check"
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                viewBox="0 -960 960 960"
+                width="24"
+              >
+                <path
+                  d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                />
+              </svg>
+              <svg
+                class="circle"
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                viewBox="0 -960 960 960"
+                width="24"
+              >
+                <path
+                  d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                />
+              </svg>
+              </div>
+              <h2 class="titulo-tarefa position-relative">Les verbes irréguliers<button class="btn stretched-link opacity-0"  data-bs-toggle="modal" data-bs-target="#modalTarefaVerbos"></button></h2>
+            </div>
+            <div class="vence-tarefa">
+              <span>04/12/2023</span>
+            </div>
+          </div>
+          <div class="linha-tarefa-2">
+            <div class="descricao-tarefa">
+              <p>
+                Conjugação dos verbos irregulares em francês. Lembrar dos diferentes tipos de irregulares.
+              </p>
+            </div>
+          </div>
+          <div class="linha-tarefa-3">
+            <div class="categorias">
+
+            </div>
+            <div class="lista-tarefa position-relative">
+              <span>            <svg
+                class="svg-lista"
+                width="22"
+                height="22"
+                id="emoji"
+                viewBox="0 0 72 72"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="color">
+                  <rect x="5" y="17" width="62" height="38" fill="#fff" />
+                  <rect x="5" y="17" width="21" height="38" fill="#1e50a0" />
+                  <rect x="46" y="17" width="21" height="38" fill="#d22f27" />
+                </g>
+                <g id="line">
+                  <rect
+                    x="5"
+                    y="17"
+                    width="62"
+                    height="38"
+                    fill="none"
+                    stroke="#000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </g>
+              </svg> Francês</span>
+              <a href="frances.html" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="modal fade"
+      id="modalConfiguracoes"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              Modal title
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Understood</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/home.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+    </script>
+  </body>
+</html>
